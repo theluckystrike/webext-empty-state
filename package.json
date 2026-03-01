@@ -1,0 +1,37 @@
+{
+    "name": "webext-empty-state",
+    "version": "0.1.0",
+    "description": "Empty state component for Chrome extensions — illustrated empty states, call-to-action buttons, error states, and loading-to-empty transitions for MV3.",
+    "author": "Zovo <hello@zovo.one>",
+    "license": "MIT",
+    "keywords": [
+        "chrome-extension",
+        "empty-state",
+        "placeholder",
+        "error",
+        "cta",
+        "manifest-v3",
+        "browser-extension",
+        "ui-component",
+        "zero-state"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/theluckystrike/webext-empty-state.git"
+    },
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "prepublishOnly": "npm run build"
+    },
+    "devDependencies": {
+        "@types/chrome": "^0.0.260",
+        "typescript": "^5.3.3"
+    }
+}
