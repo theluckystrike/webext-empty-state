@@ -1,12 +1,69 @@
-# webext-empty-state — Empty State Components
-> **Built by [Zovo](https://zovo.one)** | `npm i webext-empty-state`
+# webext-empty-state
 
-Error, no results, no data, and offline empty states with CTA buttons.
+Empty state UI components for Chrome extensions. Provides illustrated empty states, error states, loading transitions, and call-to-action buttons for Manifest V3 extensions.
+
+## Installation
+
+```bash
+npm install webext-empty-state
+```
+
+## Usage
+
+Import the EmptyState class and render states into any container element.
 
 ```typescript
 import { EmptyState } from 'webext-empty-state';
+
+// Initial empty state with action button
 EmptyState.noData('container', 'Add Item', () => openForm());
-EmptyState.error('container', 'Failed to load', () => retry());
+
+// Error state with retry
+EmptyState.error('container', 'Failed to load your data', () => retry());
+
+// Offline state
 EmptyState.offline('container', () => location.reload());
+
+// No results from search
+EmptyState.noResults('container', 'search query');
 ```
-MIT License
+
+## API Reference
+
+### EmptyState.render(containerId, options)
+
+Base method for rendering a custom empty state.
+
+- `containerId` - ID of the DOM element to render into
+- `options.icon` - Emoji or icon string (default: inbox emoji)
+- `options.title` - Required heading text
+- `options.description` - Optional description paragraph
+- `options.actionLabel` - Optional button label
+- `options.onAction` - Optional callback when button is clicked
+
+### EmptyState.error(containerId, message, onRetry)
+
+Renders an error state with a warning icon and optional retry button.
+
+### EmptyState.noResults(containerId, query)
+
+Renders a no results state with a search icon. If query is provided, displays it in the description.
+
+### EmptyState.noData(containerId, actionLabel, onAction)
+
+Renders an empty state encouraging the user to add their first item.
+
+### EmptyState.offline(containerId, onRetry)
+
+Renders an offline state with a retry button.
+
+## Requirements
+
+- TypeScript 5.3+
+- Chrome or Chromium-based browser extension (Manifest V3)
+
+## About
+
+Maintained by theluckystrike. Built for browser extension developers who need polished empty state components without external dependencies.
+
+For issues and contributions, see the CONTRIBUTING guide.
