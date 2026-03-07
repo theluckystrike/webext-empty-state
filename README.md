@@ -1,3 +1,8 @@
+[![CI](https://github.com/theluckystrike/webext-empty-state/actions/workflows/ci.yml/badge.svg)](https://github.com/theluckystrike/webext-empty-state/actions)
+[![npm](https://img.shields.io/npm/v/webext-empty-state)](https://www.npmjs.com/package/webext-empty-state)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
+
 # webext-empty-state
 
 Empty state UI components for Chrome extensions. Provides illustrated empty states, error states, loading transitions, and call-to-action buttons for Manifest V3 extensions.
@@ -67,3 +72,11 @@ Renders an offline state with a retry button.
 Maintained by theluckystrike. Built for browser extension developers who need polished empty state components without external dependencies.
 
 For issues and contributions, see the CONTRIBUTING guide.
+
+## License
+
+MIT
+
+---
+
+Built by [theluckystrike](https://github.com/theluckystrike) — [zovo.one](https://zovo.one)
